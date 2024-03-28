@@ -1,10 +1,10 @@
 import React from 'react'
-
+import "./walletbalance.css"
 const walletbalance = () => {
   return (
-    <div>
-        <h1>Wallet Balance: 4500</h1>
-        <button className='add-income'>+ Add Income</button>
+    <div className='walletbalance'>
+        <h1 className='walletbalance-text'>Wallet Balance: <span className='price'>4500</span></h1>
+        <button className='walletbalance-button'>+ Add Income</button>
     </div>
   )
 }
