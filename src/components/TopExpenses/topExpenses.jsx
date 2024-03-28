@@ -1,8 +1,13 @@
 import React from 'react'
-
+import "./styles.css"
 const topExpenses = () => {
   return (
-    <div>topExpenses</div>
+    <div>
+        <h1>Top Expenses</h1>
+        <div className="expenses-container">
+
+        </div>
+    </div>
   )
 }
 

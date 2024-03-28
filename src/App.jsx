@@ -1,14 +1,22 @@
 import './App.css';
-import Walletbalance from './components/walletbalance/walletbalance';
+import Walletbalance from './components/Walletbalance/Walletbalance';
 import Expenses from './components/expenses/expenses';
 import RecentTransactions from './components/RecentTransactions/recentTransactions';
 import  TopExpenses  from './components/TopExpenses/topExpenses';
+import { useState } from 'react';
 function App() {
+  const [walletBalance, setWalletBalance] =  useState(5000);
+
+
+  const addIncome =(amount)=>{
+    setWalletBalance(prevBalance => prevBalance + amount)
+  }
+
   return (
     <div className="App">
       <h1 className='top-heading'>Expense Tracker</h1>
       <div className="top">
-        <Walletbalance/>
+        <Walletbalance balance={walletBalance} addIncome={addIncome}/>
         <Expenses/>
         <div class="wagon">
           <div class="category food">
